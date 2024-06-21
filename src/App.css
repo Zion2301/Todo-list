@@ -1,0 +1,447 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  padding: 40px;
+} */
+
+input {
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 6px;
+}
+
+.input::placeholder {
+  font-size: 17px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+/* Style the label as a checkbox */
+.custom-checkbox-label {
+  position: relative;
+  display: inline-block;
+  width: 30px; 
+  height: 30px;
+  background-color: #fff;
+  border: 3px solid #ccc;
+  border-radius: 50%; /* Makes it round */
+  cursor: pointer;
+}
+
+/* Checkbox checked state */
+.custom-checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; 
+  height: 100%; 
+  border: #28a745 2px solid; 
+  background-color: #28a74629;
+  border-radius: 50%; 
+  display: none; 
+  cursor: pointer;
+ 
+}
+
+/* Show checkmark when checkbox is checked */
+input[type="checkbox"]:checked + .custom-checkbox-label::after {
+  display: block;
+  border: #28a745 3px solid;
+}
+
+.task-list {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.task-item {
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgb(180, 180, 180);
+  width: 100%;
+  border-radius: 7px;
+}
+
+.task-text {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.task-text.completed {
+text-decoration: line-through;
+}
+
+.dates {
+  font-size: 13px;
+  color: rgb(124, 124, 124);
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.leftdiv {
+  display: flex;
+  align-items: center;
+}
+
+.maintask {
+  display: flex;
+  align-items: center;
+}
+
+.start, .end {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.task-dates {
+  display: flex;
+  gap: 170px;
+}
+
+.maintask {
+  gap: 50px;
+}
+
+.maindate {
+  font-weight: lighter;
+  font-size: 13px;
+}
+
+.header {
+  text-align: right;
+  padding-right: 40px;
+  display: flex;
+  justify-content: end;
+  gap: 40px;
+  padding-top: 30px;
+}
+
+.delete-button {
+  background-color: red;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.67);
+}
+
+.toggle-form {
+  font-size: 15px;
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.toggle-search {
+  font-size: 15px;
+  border: none;
+  background-color: white;
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.toggle-form:hover, .toggle-search:hover {
+  cursor: pointer;
+}
+
+.formdiv {
+  display: flex;
+  align-items: center;
+}
+
+.task-form {
+  display: flex;
+  gap: 30px;
+}
+
+.eachdiv {
+  display: flex;
+}
+
+.add {
+  background-color: rgb(0, 128, 30);
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.add:hover {
+  cursor: pointer;
+  background-color: rgba(0, 128, 30, 0.67);
+}
+
+.searchdiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+  padding: 10px;
+}
+
+.search-bar::placeholder {
+  font-size: 17px;
+}
+
+.head {
+  padding: 30px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.336);
+  
+}
+
+.rightflex {
+  width: 80%;
+  padding: 30px;
+  border-left: 2px solid rgba(128, 128, 128, 0.321);
+}
+
+.leftflex {
+  width: 20%;
+  padding: 0;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.profile {
+   font-size: 50px;
+}
+
+.welcome {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.introduce {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 23px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.311);
+}
+
+.links {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.link {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tasklink {
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.smile {
+  font-size: 25px;
+}
+
+.idkdiv {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+@media screen and (max-width: 1245px){
+      .formdiv {
+        flex-direction: column;
+        align-items: end;
+        gap: 10px;
+      }
+}
+
+@media screen and (max-width: 1140px){
+     .task-list {
+        padding: 5px;
+     }
+
+     .task-dates {
+      gap: 50px;
+     }
+
+     .links {
+      padding: 20px;
+     }
+
+     .link, .tasklink {
+      font-size: 13px;
+     }
+
+     .header {
+      margin-bottom: 20px;
+     }
+
+     .task-form {
+      flex-direction: column;
+      align-items: start;
+     }
+}
+
+@media screen and (max-width: 1000px){
+      .welcome {
+        font-size: 15px;
+      }
+
+      .introduce {
+        padding: 15px;
+      }
+}
+
+@media screen and (max-width: 910px){
+     .introduce {
+      display: none;
+     }
+
+     .container {
+      flex-direction: column-reverse;
+     }
+
+     .rightflex {
+      width: 100%;
+      border-left: none;
+     }
+
+     .leftflex {
+      width: 100%;
+      height: 10%;
+      padding: 10px;
+      border-top: 1px solid rgb(176, 176, 176);
+      position: sticky;
+      bottom: 0;
+      background-color: white;
+      z-index: 300;
+     }
+
+     .links {
+      flex-direction: row;
+      justify-content: center;
+      justify-content: space-evenly;
+     }
+
+     .text {
+      display: none;
+     }
+}
+
+@media screen and (max-width: 710px){
+      .idkdiv {
+        flex-direction: column;
+        gap: 5px;
+        align-items: start;
+      }
+
+      .searchdiv {
+        flex-direction: column;
+        align-items: end;
+      }
+}
+
+@media screen and (max-width: 535px){
+      .maintask {
+        gap: 10px;
+        align-items: start;
+      }
+
+      .task-dates {
+        gap: 5px;
+      }
+
+      .smile {
+        font-size: 15px;
+      }
+}
+
+@media screen and (max-width: 460px){
+     .task-item {
+      padding: 10px;
+     }
+
+     .leftflex {
+      display: none;
+     }
+
+     .header {
+      gap: 10px;
+     }
+
+     .toggle-search, .toggle-form {
+      font-size: 13px;
+     }
+}
+
+
+@media screen and (max-width: 385px){
+       .task-text {
+        font-size: 15px;
+       }
+
+       .start, .end {
+            font-size: 12px;
+       }
+
+       .maindate {
+           font-size: 10px;
+       }
+
+       .delete-button {
+        font-size: 9px;
+        padding: 5px;
+       }
+}
